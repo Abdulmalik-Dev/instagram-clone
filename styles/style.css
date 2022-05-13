@@ -1,0 +1,183 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Fredoka", sans-serif;
+  font-family: "Open Sans", sans-serif;
+}
+
+:root {
+  --main-border: 1px solid black;
+}
+
+img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+header {
+  padding: 0.5rem;
+  border-bottom: var(--main-border);
+  position: sticky;
+  top: 0;
+  background-color: white;
+}
+header > div {
+  display: flex;
+  justify-content: space-around;
+}
+@media (min-width: 1000px) {
+  header > div {
+    width: 900px;
+    margin: auto;
+  }
+}
+header > div .left,
+header > div .right {
+  flex: 1;
+  display: flex;
+  align-items: center;
+}
+header > div .left {
+  justify-content: space-around;
+}
+header > div .left .searct-bar {
+  position: relative;
+  margin-left: 8rem;
+}
+@media (max-width: 640px) {
+  header > div .left .searct-bar {
+    display: none;
+  }
+}
+header > div .left .searct-bar i {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 10px;
+  font-size: 14px;
+  color: gray;
+}
+header > div .left .searct-bar input {
+  height: 2rem;
+  padding-left: 2rem;
+  border: none;
+  border-radius: 7px;
+  outline: none;
+  background-color: #efefef;
+}
+header > div .right {
+  justify-content: center;
+}
+header > div .right i {
+  font-size: 20px;
+  margin: 0.4rem;
+  cursor: pointer;
+}
+
+main {
+  display: flex;
+  justify-content: space-around;
+  margin: 1rem;
+  text-align: center;
+}
+@media (min-width: 1000px) {
+  main {
+    width: 900px;
+    margin: 1rem auto;
+  }
+}
+main section {
+  flex: 1;
+}
+main section .stories {
+  border: var(--main-border);
+}
+main section .stories img {
+  margin: 0 10px;
+}
+main .posts-container .post-box {
+  border: var(--main-border);
+  margin: 1rem 0;
+  padding: 1rem;
+  overflow: hidden;
+}
+main .posts-container .post-box .poster-info {
+  display: flex;
+  justify-content: space-around;
+  cursor: pointer;
+}
+main .posts-container .post-box .post img {
+  width: 100%;
+  height: auto;
+  border-radius: initial;
+  margin-top: 1rem;
+}
+main .posts-container .post-box .sittings {
+  display: flex;
+  flex-direction: column;
+  float: left;
+}
+main .posts-container .post-box .sittings div {
+  text-align: left;
+  font-size: 15px;
+}
+main .posts-container .post-box .sittings div.comments-count, main .posts-container .post-box .sittings div.share-date {
+  color: gray;
+}
+main .posts-container .post-box .sittings div.comments-count {
+  cursor: pointer;
+}
+main .posts-container .post-box .sittings .icons {
+  margin-bottom: 1rem;
+}
+main .posts-container .post-box .sittings .icons i {
+  margin: 0 5px;
+  font-size: 21px;
+  cursor: pointer;
+}
+main nav {
+  flex: 0.5;
+  display: flex;
+  flex-direction: column;
+}
+@media (max-width: 1000px) {
+  main nav {
+    display: none;
+  }
+}
+main nav .box {
+  display: flex;
+  padding-left: 2rem;
+  cursor: pointer;
+}
+main nav .box:not(:first-of-type) img {
+  width: 35px;
+  height: 35px;
+}
+main nav .box div {
+  color: gray;
+}
+main nav .box div p:nth-child(2) {
+  font-size: 12px;
+}
+main nav .box button {
+  width: 6rem;
+  height: 22px;
+  margin-top: 50px;
+  margin-left: 15px;
+  border: none;
+  color: #5bbaf7;
+}
+main nav > p {
+  color: gray;
+  margin: 1rem;
+  font-size: 14px;
+}
+
+/*# sourceMappingURL=style.css.map */
